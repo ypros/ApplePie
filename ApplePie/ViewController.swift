@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet var treeImageView: UIImageView!
     @IBOutlet weak var lettersStackView: UIStackView!
     @IBOutlet weak var guessWordStackView: UIStackView!
     
@@ -22,12 +23,15 @@ class ViewController: UIViewController {
     }
     
     func startNewGame() {
+        
+        treeImageView.image = UIImage(named: "Tree\(game.turnsLeft)")
+        
         for element in guessWordStackView.arrangedSubviews {
             element.removeFromSuperview()
         }
         
         let guessLabel = UILabel()
-        guessLabel.text = "Try to guess the word!"
+        guessLabel.text = "Try to guess the name of state!"
         guessLabel.textColor = .black
         guessWordStackView.addArrangedSubview(guessLabel)
         
@@ -35,7 +39,7 @@ class ViewController: UIViewController {
         row.axis = .horizontal
         row.alignment = .fill
         row.distribution = .fillEqually
-        row.spacing = 10
+        row.spacing = 8
   
         guessWordStackView.addArrangedSubview(row)
         
@@ -51,7 +55,7 @@ class ViewController: UIViewController {
             row.axis = .horizontal
             row.alignment = .fill
             row.distribution = .fillEqually
-            row.spacing = 10
+            row.spacing = 8
             lettersStackView.addArrangedSubview(row)
             
             createButtons(letters: line, stackView: row)
@@ -110,6 +114,8 @@ class ViewController: UIViewController {
     
     func updateUI() {
         
+        treeImageView.image = UIImage(named: "Tree\(game.turnsLeft)")
+        
         let element0 = guessWordStackView.arrangedSubviews[0]
         let element1 = guessWordStackView.arrangedSubviews[1]
         
@@ -128,17 +134,13 @@ class ViewController: UIViewController {
                     self.startNewGame()
                 }
             }
-            else if game.isOver {
+            if game.isOver {
                 label.text = "Sorry, the right word is \(game.word.name)"
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                     self.game.newGame()
                     self.startNewGame()
                 }
-            }
-            
-            else {
-                label.text = "Turns left \(game.turnsLeft)"
             }
         }
     }
@@ -151,10 +153,8 @@ class ViewController: UIViewController {
             if let title = sender.title(for: .normal) {
                 game.checkLetter(title)
                 
-                
-                UIView.animate(withDuration: 1) {
-                    self.updateUI()
-                }
+                updateUI()
+
             }
         }
     }
