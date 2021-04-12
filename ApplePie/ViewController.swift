@@ -135,6 +135,7 @@ class ViewController: UIViewController {
                 }
             }
             if game.isOver {
+                
                 label.text = "Sorry, the right word is \(game.word.name)"
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -147,6 +148,9 @@ class ViewController: UIViewController {
     
     @objc func letterButtonPressed(sender: UIButton) {
         if !game.isOver && !game.isWin {
+            
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
             
             sender.isEnabled = false
             
