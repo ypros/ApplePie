@@ -1,5 +1,7 @@
 # ApplePie
-## Try to guess the name of the state. You can make only 7 mistakes.
+## Try to guess the hidden word:
+### You can make only 7 mistakes
+### 3 word themes - car brands, US states, Olympic Games host citites
 
 The 2 project from the App Development with Swift course.
 
