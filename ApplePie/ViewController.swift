@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         startNewGame()
     }
     
+    ///initializes new game and its defual properties - adds labels and button in UI
     func startNewGame() {
         
         treeImageView.image = UIImage(named: "Tree\(game.turnsLeft)")
@@ -31,7 +32,7 @@ class ViewController: UIViewController {
         }
         
         let guessLabel = UILabel()
-        guessLabel.text = "Try to guess the name of state!"
+        guessLabel.text = "Guess the word - \(game.theme.name)"
         guessLabel.textColor = .black
         guessWordStackView.addArrangedSubview(guessLabel)
         
@@ -68,15 +69,10 @@ class ViewController: UIViewController {
         
     }
     
+    ///adds label and buttons representing  hiiden word in stack view
     func createWord(word: Word, stackView: UIStackView) {
         for letter in word.letters {
-            if letter.label == " " {
-                let label = UILabel()
-                label.text = " "
-                
-                stackView.addArrangedSubview(label)
-            }
-            else {
+            if "QWERTYUIOPASDFGHJKLZXCVBNM".contains(Character(letter.label)) {
                 let button = UIButton(type: .roundedRect)
                 button.setTitle(letter.isHidden ? " " : letter.label, for: [])
                 button.titleLabel?.font = .systemFont(ofSize: 20)
@@ -89,10 +85,18 @@ class ViewController: UIViewController {
                 
                 stackView.addArrangedSubview(button)
             }
+            else {
+                let label = UILabel()
+                label.text = letter.label
+                label.textAlignment = .center
+                
+                stackView.addArrangedSubview(label)
+            }
         }
         
     }
     
+    ///adds button for each letter in string in stack view
     func createButtons(letters: String, stackView: UIStackView) {
         for letter in letters {
             
@@ -112,6 +116,7 @@ class ViewController: UIViewController {
         }
     }
     
+    ///updates UI after changes in model
     func updateUI() {
         
         treeImageView.image = UIImage(named: "Tree\(game.turnsLeft)")
@@ -138,7 +143,7 @@ class ViewController: UIViewController {
                 
                 label.text = "Sorry, the right word is \(game.word.name)"
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     self.game.newGame()
                     self.startNewGame()
                 }
@@ -146,6 +151,7 @@ class ViewController: UIViewController {
         }
     }
     
+    ///checkes selected letter in hidden word and updates UI
     @objc func letterButtonPressed(sender: UIButton) {
         if !game.isOver && !game.isWin {
             
