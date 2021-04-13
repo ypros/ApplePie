@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "344D2B64-BC95-4463-A260-75E5A089D01C"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "19D5E15C-AADB-49D8-94B0-73614C211995"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ApplePie/Game.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "checkLetter(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "19D5E15C-AADB-49D8-94B0-73614C211995 - 1afa967388b4bca5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ApplePie.Game.checkLetter(Swift.String) -&gt; ()"
+                  moduleName = "ApplePie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/proy/Documents/swift/ApplePie/ApplePie/Game.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "1016">
+               </Location>
+               <Location
+                  uuid = "19D5E15C-AADB-49D8-94B0-73614C211995 - dfe2c0a0ea0770e2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (ApplePie.Letter) -&gt; Swift.Bool in ApplePie.Game.checkLetter(Swift.String) -&gt; ()"
+                  moduleName = "ApplePie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/proy/Documents/swift/ApplePie/ApplePie/Game.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90E2B5C9-71CB-4596-84C4-3A3308CFFDF7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ApplePie/Game.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "checkLetter(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ViewController.updateUI():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "game.word.letters">
+            </PersistentString>
+            <PersistentString
+               value = "game.isWin">
+            </PersistentString>
+            <PersistentString
+               value = "row.subviews[letter.tag]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Game.newGame():Game.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dictionary.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Game.checkLetter(_:):Game.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "guessWord">
+            </PersistentString>
+            <PersistentString
+               value = "word.letters[5]">
+            </PersistentString>
+            <PersistentString
+               value = "word.letters.firstIndex(where: {$0.isHidden})">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
